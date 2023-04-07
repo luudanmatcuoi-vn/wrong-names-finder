@@ -32,7 +32,7 @@ Sunohara, Mei
 Yoshino, Yusuke
 """
 
-
+resssssss =""
 # lọc bước đầu
 name = name.lower()
 name = name.replace(",","")
@@ -45,7 +45,7 @@ name = [t for t in name if t !="" ]
 dataraw = data
 data = data.lower()
 
-name = list(set(name))
+# name = list(set(name))
 
 for n in name: 
 	lenn = len(n)
@@ -56,10 +56,14 @@ for n in name:
 
 	result = [t[1:-1] for t in res]
 	result = list(set(result))
-	print("--------------------------")
-	print(n)
+	resssssss+="----------------------------\n"
+	resssssss+=n+"\n"
 	for t in result:
 		temp = [g for g in res if t in g]
-		print(t+"\t"+str(temp))
+		resssssss += t+"\t"+str(temp)+"\n"
 
+print(resssssss)
+pyperclip.copy(resssssss)
+
+print("Kết quả đã copy vào clipboard, dán vào đâu đấy đi")
 input()
